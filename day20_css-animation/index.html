@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation and responsive media query</title>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+           
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        @media screen and (max-width: 780px) {
+          body{
+            background-color: brown;
+          }
+          .box{
+            background-color: white;
+            color: black;
+          }
+          .d_none{
+            display: none;
+           }
+        }
+
+       
+        @media screen and (max-width: 600px){
+          body{
+            background-image:url('https://images.pexels.com/photos/19825336/pexels-photo-19825336/free-photo-of-malta.jpeg?auto=compress&cs=tinysrgb&w=900') ;
+            
+          }
+        }
+       
+        @media screen and (max-width: 500px){
+            .container{
+                flex-direction: column;
+            }
+            .d_none{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box">10</div>
+        <div class="box">20</div>
+        <div class="box">30</div>
+        <div class="box">40</div>
+        <div class="box">50</div>
+        <div class="box d_none">60</div>
+        <div class="box d_none">70</div>
+        <div class="box d_none">80</div>
+
+     </div>
+</body>
+</html>

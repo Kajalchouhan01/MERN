@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surface Area Calculator</title>
+</head>
+<body>
+
+<script>
+    // Function to calculate surface area of a cube
+    function cubeSurfaceArea(side) {
+        return 6 * side * side;
+    }
+
+    // Function to calculate surface area of a rectangular prism
+    function rectangularPrismSurfaceArea(length, width, height) {
+        return 2 * (length * width + length * height + width * height);
+    }
+
+    // Function to calculate surface area of a sphere
+    function sphereSurfaceArea(radius) {
+        return 4 * Math.PI * radius * radius;
+    }
+
+    // Function to calculate surface area of a cylinder
+    function cylinderSurfaceArea(radius, height) {
+        return 2 * Math.PI * radius * (radius + height);
+    }
+
+    // Example usage
+    console.log("Surface Area of Cube with side 3: " + cubeSurfaceArea(3));
+    console.log("Surface Area of Rectangular Prism with dimensions 2x3x4: " + rectangularPrismSurfaceArea(2, 3, 4));
+    console.log("Surface Area of Sphere with radius 5: " + sphereSurfaceArea(5));
+    console.log("Surface Area of Cylinder with radius 2 and height 6: " + cylinderSurfaceArea(2, 6));
+  
+ 
+
+
+</script>
+
+</body>
+</html>
