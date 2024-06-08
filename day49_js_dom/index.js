@@ -40,3 +40,4 @@ const getInputVal = () => {
 document.querySelector("#add").addEventListener("click", () => {
   document.querySelector("h1").innerText = input1 + input2;
 });
+

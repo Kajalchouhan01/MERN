@@ -11,7 +11,7 @@
 
 //  fetch data from api      ........              
 const fetchDataFromAPI = async () =>{
-    const api = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+    const api = await fetch('https://jsonplaceholder.typicode.com/photos');
     const data = await api.json();
     console.log(data)
 }
