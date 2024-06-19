@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surface Area Calculator</title>
+</head>
+<body>
+
+<h2>Surface Area Calculator</h2>
+
+<div>
+    <label for="shape">Select a shape:</label>
+    <select id="shape">
+        <option value="cube">Cube</option>
+        <option value="rectangularPrism">Rectangular Prism</option>
+        <option value="sphere">Sphere</option>
+        <option value="cylinder">Cylinder</option>
+    </select>
+</div>
+
+<div id="inputs">
+    <!-- Inputs for cube -->
+    <div id="cubeInputs" style="display:none;">
+        <label for="cubeSide">Side Length:</label>
+        <input type="number" id="cubeSide" step="any">
+    </div>
+
+    <!-- Inputs for rectangular prism -->
+    <div id="rectangularPrismInputs" style="display:none;">
+        <label for="rectLength">Length:</label>
+        <input type="number" id="rectLength" step="any">
+        <label for="rectWidth">Width:</label>
+        <input type="number" id="rectWidth" step="any">
+        <label for="rectHeight">Height:</label>
+        <input type="number" id="rectHeight" step="any">
+    </div>
+
+    <!-- Inputs for sphere -->
+    <div id="sphereInputs" style="display:none;">
+        <label for="sphereRadius">Radius:</label>
+        <input type="number" id="sphereRadius" step="any">
+    </div>
+
+    <!-- Inputs for cylinder -->
+    <div id="cylinderInputs" style="display:none;">
+        <label for="cylRadius">Radius:</label>
+        <input type="number" id="cylRadius" step="any">
+        <label for="cylHeight">Height:</label>
+        <input type="number" id="cylHeight" step="any">
+    </div>
+</div>
+
+<button onclick="calculateSurfaceArea()">Calculate Surface Area</button>
+
+<div id="result"></div>
+
+<script>
+    function calculateSurfaceArea() {
+        var shape = document.getElementById('shape').value;
+        var resultElement = document.getElementById('result');
+        var result = 0;
+
+        if (shape === 'cube') {
+            var side = parseFloat(document.getElementById('cubeSide').value);
+            result = 6 * side * side;
+        } else if (shape === 'rectangularPrism') {
+            var length = parseFloat(document.getElementById('rectLength').value);
+            var width = parseFloat(document.getElementById('rectWidth').value);
+            var height = parseFloat(document.getElementById('rectHeight').value);
+            result = 2 * (length * width + length * height + width * height);
+        } else if (shape === 'sphere') {
+            var radius = parseFloat(document.getElementById('sphereRadius').value);
+            result = 4 * Math.PI * radius * radius;
+        } else if (shape === 'cylinder') {
+            var radius = parseFloat(document.getElementById('cylRadius').value);
+            var height = parseFloat(document.getElementById('cylHeight').value);
+            result = 2 * Math.PI * radius * (radius + height);
+        }
+
+        resultElement.textContent = "Surface Area: " + result.toFixed(2);
+    }
+
+    // Function to show inputs based on selected shape
+    function showInputs() {
+        var shape = document.getElementById('shape').value;
+        var allInputs = document.querySelectorAll('#inputs > div');
+        allInputs.forEach(function(input) {
+            input.style.display = 'none';
+        });
+        document.getElementById(shape + 'Inputs').style.display = 'block';
+    }
+
+    // Event listener for shape selection
+    document.getElementById('shape').addEventListener('change', showInputs);
+</script>
+
+</body>
+</html>

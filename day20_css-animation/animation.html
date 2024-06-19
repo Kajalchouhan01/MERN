@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        /* .box{
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+            animation-name: superman ;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            position: relative;
+        } */
+        .box3{
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+            animation-name: spiderman;
+            animation-duration: 5s;
+            position: relative;
+            animation-iteration-count: infinite;
+        }
+        /* @keyframes superman {
+           to{
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+           }
+           from{
+            background-color: yellow;
+            height: 200px;
+            width: 300px;
+            border: 2px solid blueviolet;
+            transform: translate(50px, 100px);
+           } */
+           @keyframes spiderman{
+               0%{
+                  left: 0px;
+                  top: 0px;
+                  background-color: blueviolet;
+               }
+               25%{
+                left: 300px;
+                  top: 0px;
+                  background-color: blue;
+               }
+               50%{
+                left: 300px;
+                  top: 500px;
+                  background-color: darkmagenta;
+               }
+               75%{
+                left: 0px;
+                  top: 500px;
+                  background-color: darkred;
+               }
+              100%{
+                left: 0px;
+                  top: 0px;
+
+              }
+           }
+
+    </style>
+   
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box3"></div>
+</body>
+</html>

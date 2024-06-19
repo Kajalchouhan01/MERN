@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document_browser object modal</title>
+    <style>
+        .title {
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            color: white;
+        }
+
+        .main {
+            padding-left: 200px;
+            margin-top: 100px;
+            font-size: xx-large;
+
+        }
+
+        .but {
+            height: 50px;
+            width: 100px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+        }
+        .question {
+            display: none;
+        }
+
+        .question.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <h1>Quiz game</h1>
+    </div>
+    <br>
+    <div class="main">
+        <div id="question1" class="question active">
+            Q1: What does CSS stand for?
+            <br><br>
+
+            <input type="radio" name="q1" id="q1a1" />
+            <label for="q1a1">Colorful Style Sheet</label>
+            <br>
+            <input type="radio" name="q1" id="q1a2" />
+            <label for="q1a2">Creative Style Sheets</label>
+            <br>
+            <input type="radio" name="q1" id="q1a3" />
+            <label for="q1a3">Computer Style Sheets</label>
+            <br>
+            <input type="radio" name="q1" id="q1a4" />
+            <label for="q1a4">Cascading Style Sheets</label>
+        </div>
+        <div id="question2" class="question">
+            Q2: What does HTML stand for?
+            <br><br>
+
+            <input type="radio" name="q2" id="q2a1" />
+            <label for="q2a1">Hyper Trainer Marking Language</label>
+            <br>
+            <input type="radio" name="q2" id="q2a2" />
+            <label for="q2a2">Hyper Text Marketing Language</label>
+            <br>
+            <input type="radio" name="q2" id="q2a3" />
+            <label for="q2a3">Hyper Text Markup Language</label>
+            <br>
+            <input type="radio" name="q2" id="q2a4" />
+            <label for="q2a4">Hyper Text Markup Leveler</label>
+        </div>
+        <div id="question3" class="question active">
+            Q3: What HTML tag do you put things in if you want them to appear on the page?
+            <br><br>
+
+            <input type="radio" name="q3" id="q3a1" />
+            <label for="q3a1">html</label>
+            <br>
+            <input type="radio" name="q3" id="q3a2" />
+            <label for="q3a2">head</label>
+            <br>
+            <input type="radio" name="q3" id="q3a3" />
+            <label for="q3a3">body</label>
+            <br>
+            <input type="radio" name="q3" id="q3a4" />
+            <label for="q3a4">p</label>
+        </div>
+        <div id="question4" class="question active">
+            Q4: What tag attribute can you put CSS code into?
+            <br><br>
+
+            <input type="radio" name="q4" id="q4a1" />
+            <label for="q4a1">title</label>
+            <br>
+            <input type="radio" name="q4" id="q4a2" />
+            <label for="q4a2">height</label>
+            <br>
+            <input type="radio" name="q4" id="q4a3" />
+            <label for="q4a3"> style</label>
+            <br>
+            <input type="radio" name="q4" id="q4a4" />
+            <label for="q4a4"> width</label>
+        </div>
+        <div id="question5" class="question active">
+            Q5: What tag do you use to put a title on a table?
+            <br><br>
+
+            <input type="radio" name="q5" id="q5a1" />
+            <label for="q5a1">tr</label>
+            <br>
+            <input type="radio" name="q5" id="q5a2" />
+            <label for="q5a2">Caption</label>
+            <br>
+            <input type="radio" name="q5" id="q5a3" />
+            <label for="q5a3">th</label>
+            <br>
+            <input type="radio" name="q5" id="q5a4" />
+            <label for="q5a4">title</label>
+        </div>
+        <div id="question6" class="question active">
+            Q6: What CSS property makes the colour of the page change?
+            <br><br>
+
+            <input type="radio" name="q6" id="q6a1" />
+            <label for="q6a1"> font-color</label>
+            <br>
+            <input type="radio" name="6" id="q6a2" />
+            <label for="q6a2"> font-size</label>
+            <br>
+            <input type="radio" name="q6" id="q6a3" />
+            <label for="q6a3"> color</label>
+            <br>
+            <input type="radio" name="q6" id="q6a4" />
+            <label for="q6a4">background-color</label>
+        </div>
+        <div id="question7" class="question active">
+            Q7: Give an example of a boolean attribute.
+            <br><br>
+
+            <input type="radio" name="q7" id="q7a1" />
+            <label for="q7a1">autoplay</label>
+            <br>
+            <input type="radio" name="q7" id="q7a2" />
+            <label for="q7a2"> height</label>
+            <br>
+            <input type="radio" name="q7" id="q7a3" />
+            <label for="q7a3">style</label>
+            <br>
+            <input type="radio" name="q7" id="q7a4" />
+            <label for="q7a4">title</label>
+        </div>
+        <div id="question8" class="question active">
+            Q8: What CSS property makes text go bold?
+            <br><br>
+
+            <input type="radio" name="q8" id="q8a1" />
+            <label for="q8a1">font-size</label>
+            <br>
+            <input type="radio" name="q8" id="q8a2" />
+            <label for="q8a2">text-decoration
+            </label>
+            <br>
+            <input type="radio" name="q8" id="q8a3" />
+            <label for="q8a3">bold</label>
+            <br>
+            <input type="radio" name="q8" id="q8a4" />
+            <label for="q8a4"> font-weight</label>
+        </div>
+        <div id="question9" class="question active">
+            Q9: What attribute of the img tag displays things on the page if the picture cannot be?
+            <br><br>
+
+            <input type="radio" name="q9" id="q9a1" />
+            <label for="q9a1">src</label>
+            <br>
+            <input type="radio" name="q9" id="q9a2" />
+            <label for="q9a2">alt</label>
+            <br>
+            <input type="radio" name="q9" id="q9a3" />
+            <label for="q9a3">style</label>
+            <br>
+            <input type="radio" name="q9" id="q9a4" />
+            <label for="q9a4">height</label>
+        </div>
+        <div id="question10" class="question active">
+            Q10: What type of file ends in a three letter code of .mp4?
+            <br><br>
+
+            <input type="radio" name="q10" id="q10a1" />
+            <label for="q10a1"> video</label>
+            <br>
+            <input type="radio" name="q10" id="q10a2" />
+            <label for="q10a2">sound</label>
+            <br>
+            <input type="radio" name="q10" id="q10a3" />
+            <label for="q10a3">picture</label>
+            <br>
+            <input type="radio" name="q10" id="q10a4" />
+            <label for="q10a4">Html</label>
+        </div>
+        <div id="question11" class="question active">
+            Q11: What is an example of a CSS event?
+            <br><br>
+
+            <input type="radio" name="q11" id="q11a1" />
+            <label for="q11a1">start</label>
+            <br>
+            <input type="radio" name="q11" id="q11a2" />
+            <label for="q11a2">stop</label>
+            <br>
+            <input type="radio" name="q11" id="q11a3" />
+            <label for="q11a3">hover</label>
+            <br>
+            <input type="radio" name="q11" id="q11a4" />
+            <label for="q11a4">play</label>
+        </div>
+        <br><br>
+        <button class="but" onclick="prevQuestion()">Prev</button>
+        <button class="but" onclick="nextQuestion()">Next</button>
+
+
+    </div>
+
+    <script src="task.js"></script>
+
+</body>
+
+</html>

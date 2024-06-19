@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow !important Calc</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color: black;
+            color: white
+        }
+        .box{
+            margin: 100px;
+            
+            background-color: white;
+            color: black;
+            height: 300px;
+            width: 300px;
+            overflow: auto;
+
+        }
+        .box::-webkit-scrollbar{
+            display: none;
+        }
+        .box1{
+            height: 40px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate tenetur sequi rerum numquam eos qui quidem animi illum sapiente, nemo repudiandae eveniet. Recusandae nisi necessitatibus nostrum, distinctio voluptatibus repudiandae autem totam, optio accusantium quos, eveniet dignissimos ad iusto delectus! Natus cumque, deleniti architecto nobis asperiores quae modi suscipit quos perferendis dolores rerum voluptas repellat quo aliquid temporibus quibusdam error cum quia quas? Tenetur molestiae consequatur est quis incidunt esse reiciendis dolor minima. Quam cum eveniet, facere impedit voluptatibus dicta perspiciatis praesentium sed minima labore quod sit ad quo exercitationem magni, assumenda alias asperiores optio! Veniam quidem magni quia aliquam accusamus.</div>
+    
+    <div class="box1" style="background-color: blueviolet; color: white;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, laborum.</div>
+</body>
+</html>
