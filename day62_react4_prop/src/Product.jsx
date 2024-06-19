@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Product = ({Title,discription,img,price}) => {
+const Product = ({Title,discription,imgsrc,price}) => {
   return (
     <div  style={{
         textAlign:'center',
@@ -12,8 +12,9 @@ const Product = ({Title,discription,img,price}) => {
     }}>
         <h3>{Title}</h3>
         <h3>{discription}</h3>
-        <h3>{img}</h3>
+        <h3>img src={}</h3>
         <h3>{price}</h3>
+        
 
     </div>
   )
