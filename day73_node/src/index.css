@@ -1,0 +1,65 @@
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fblue-white-background&psig=AOvVaw3GngPQMJJIS6BlvPJwvrsY&ust=1704719384025000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMi419-sy4MDFQAAAAAdAAAAABAD");
+}
+.icon{
+  margin-left: 20px;
+  position: relative;
+  top: -10px;
+}
+
+/* //navbar
+ */
+
+
+ /* Navbar.css */
+ .navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
+  width: 130px;
+  height: 100vh;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  padding: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color:white;
+}
+
+.navbar.open {
+  width: 00px; /* Adjust the width when the navbar is open */
+}
+.navbarbutton{
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  font-size: xx-large;
+
+}
+
+
+/* //name animation */
