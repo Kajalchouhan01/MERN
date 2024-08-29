@@ -15,6 +15,6 @@ const person1 = {
     };
     
     console.log("This is person1 object ", person1);
-    const {name, age, phoneNumber,salary} = person2 //object distructring
+    const {name, age, phoneNumber, salary} = person2 //object distructring
     console.log("This is person2 object ", age,phoneNumber,salary);
     

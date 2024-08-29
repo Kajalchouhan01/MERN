@@ -1,12 +1,19 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParse from 'express';
+import cors from 'cors';
 
 import productRouter from './routes/product.js'
 
 
 const app = express();
 app.use(bodyParse.json());
+
+app.use(cors({
+    origin:true,
+    methods:["GET","POST","DELETE","PUT"],
+    credentials:true
+}))
 
 
 // productRouter
